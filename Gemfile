@@ -1,30 +1,39 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '3.2.9'
 
-gem 'httparty'
-gem 'carrierwave'
-gem 'fog'
-gem 'jquery-rails'
-gem 'pg'
-gem 'twilio-ruby'
-gem 'stripe'
-gem 'twitter'
-gem 'aws-ses'
+# gem 'active_admin'
+# gem 'aws-ses'
+# gem 'carrierwave'
 gem 'compass-rails'
-gem 'zurb-foundation'
-gem 'localtunnel'
-
+gem 'devise'
+# gem 'facebook_oauth'
+# gem 'fog'
+# gem 'geocoder'
+# gem 'httparty'
+gem 'jquery-rails'
+# gem 'linkedin'
+# gem 'omniauth-taskrabbit'
+# gem 'omniauth-twitter'
+gem 'pg'
+gem 'sass'
+# gem 'stripe'
+# gem 'twilio-ruby'
+# gem 'twitter'
+gem 'twitter-bootstrap-rails'
+# gem 'zurb-foundation'
 
 
 group :development, :test do
+  gem 'pry-debugger'
   gem 'pry-rails'
+  gem 'pry-stack_explorer'
   gem 'thin'
 end
 
 group :development do
   gem 'annotate'
+  gem 'localtunnel'
   gem 'rails-footnotes'
 end
 

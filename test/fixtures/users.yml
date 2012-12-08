@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  email_address: MyString
+  password: MyString
+  password_confirmation: MyString
+  zipcode: MyString
+  phone_number: MyString
+  gender: MyString
+  birthday: MyString
+  likes_asian: false
+  likes_mexican: false
+  buyer_fresh_preference: MyString
+  has_allergies: false
+  username: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email_address: MyString
+  password: MyString
+  password_confirmation: MyString
+  zipcode: MyString
+  phone_number: MyString
+  gender: MyString
+  birthday: MyString
+  likes_asian: false
+  likes_mexican: false
+  buyer_fresh_preference: MyString
+  has_allergies: false
+  username: MyString

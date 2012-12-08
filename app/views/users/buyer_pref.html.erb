@@ -1,0 +1,9 @@
+Buyer prefs
+
+<%= form_for @user do |f| %>
+<%= f.label :likes_asian, "Asian Food" %>
+<%= f.text_field :likes_asian %>
+<%= f.label :likes_mexican, "Mexican Food" %>
+<%= f.text_field :likes_mexican %>
+<%= f.submit %>
+<% end %>
