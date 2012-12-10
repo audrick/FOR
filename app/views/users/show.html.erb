@@ -1,6 +1,8 @@
-<h1>Users#show</h1>
+<h1><%= @user.username %></h1>
+
 <p>Find me in app/views/users/show.html.erb</p>
 
-<%= @user.username %>
 
+<%= link_to "Edit", edit_user_path %>
 <%= link_to "My Prefs", my_prefs_path %>
+<%= link_to "Create New User", new_user_path %>
