@@ -38,16 +38,12 @@ ActiveRecord::Schema.define(:version => 20121208205409) do
     t.string   "email_address"
     t.string   "password"
     t.string   "password_confirmation"
-    t.string   "zipcode"
+    t.string   "zip_code"
     t.string   "phone_number"
     t.string   "gender"
     t.string   "birthday"
-    t.boolean  "likes_asian"
-    t.boolean  "likes_mexican"
-    t.string   "buyer_fresh_preference"
-    t.boolean  "has_allergies"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
 end
