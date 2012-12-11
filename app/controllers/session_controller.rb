@@ -1,9 +1,5 @@
 class SessionController < ApplicationController
   def new
-    if @auth
-        redirect_to user_path
-    else
-    end
   end
 
   def create
