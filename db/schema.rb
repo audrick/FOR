@@ -36,14 +36,13 @@ ActiveRecord::Schema.define(:version => 20121208205409) do
     t.string   "last_name"
     t.string   "username"
     t.string   "email_address"
-    t.string   "password"
-    t.string   "password_confirmation"
+    t.string   "password_digest"
     t.string   "zip_code"
     t.string   "phone_number"
     t.string   "gender"
     t.string   "birthday"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

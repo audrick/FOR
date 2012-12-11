@@ -1,8 +1,15 @@
 FOR::Application.routes.draw do
 
-  devise_for :users
+  # devise_for :users
 
   resources :users
+
+  root :to => 'users#new'
+
+  match '/login' => 'session#new', :via => :get
+  match '/logout' => 'session#destroy', :via => :get
+  match '/session' => 'session#create', :via => :post
+
 
   match '/my_prefs', to: 'users#buyer_pref'
 
@@ -64,7 +71,7 @@ FOR::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'users#new'
+
 
   # See how all your routes lay out with "rake routes"
 
