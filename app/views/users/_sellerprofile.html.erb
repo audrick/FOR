@@ -1,0 +1,35 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved: </h2>
+
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :seller_distance_preference %>
+    <%= f.text_field :seller_distance_preference %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you deliver?" %>
+    <%= f.radio_button :seller_delivery_preference, true %><%= f.label :seller_delivery_preference, "Yes" %>
+    <%= f.radio_button :seller_delivery_preference, false %><%= f.label :seller_delivery_preference, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Can I pickup my meal?" %>
+    <%= f.radio_button :seller_pickup_preference, true %><%= f.label :seller_pickup_preference, "Yes" %>
+    <%= f.radio_button :seller_pickup_preference, false %><%= f.label :seller_pickup_preference, "No" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+
+

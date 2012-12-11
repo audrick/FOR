@@ -46,13 +46,13 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    user = User.find(params[:id])
+    @user = User.find(params[:id])
     user.delete
     redirect_to @user
   end
 
 
   def buyer_pref
-    # @user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 end

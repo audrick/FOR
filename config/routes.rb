@@ -11,6 +11,11 @@ FOR::Application.routes.draw do
   match '/session' => 'session#create', :via => :post
 
 
+
+
+
+
+
   match '/my_prefs', to: 'users#buyer_pref'
 
 

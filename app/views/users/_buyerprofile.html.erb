@@ -1,0 +1,86 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved: </h2>
+
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label "What is your freshness preference?" %>
+    <%= f.check_box :buyer_fresh_preference, :checked => true %><%= f.label "Same Day" %>
+    <%= f.check_box :buyer_fresh_preference, :checked => false %><%= f.label "1-Day" %>
+  </div>
+  <div class="field">
+    <%= f.label :buyer_distance_preference %>
+    <%= f.text_field :buyer_distance_preference %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Do you like American?" %>
+    <%= f.radio_button :likes_american, true %><%= f.label :likes_american, "Yes" %>
+    <%= f.radio_button :likes_american, false %><%= f.label :likes_american, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you like Asian?" %>
+    <%= f.radio_button :likes_asian, true %><%= f.label :likes_asian, "Yes" %>
+    <%= f.radio_button :likes_asian, false %><%= f.label :likes_asian, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you like Mexican?" %>
+    <%= f.radio_button :likes_mexican, true %><%= f.label :likes_mexican, "Yes" %>
+    <%= f.radio_button :likes_mexican, false %><%= f.label :likes_mexican, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you like Barbecue?" %>
+    <%= f.radio_button :likes_barbecue, true %><%= f.label :likes_barbecue, "Yes" %>
+    <%= f.radio_button :likes_barbecue, false %><%= f.label :likes_barbecue, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you like Vegetarian?" %>
+    <%= f.radio_button :likes_vegetarian, true %><%= f.label :likes_vegetarian, "Yes" %>
+    <%= f.radio_button :likes_vegetarian, false %><%= f.label :likes_vegetarian, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you like Snacks?" %>
+    <%= f.radio_button :likes_snack, true %><%= f.label :likes_snack, "Yes" %>
+    <%= f.radio_button :likes_snack, false %><%= f.label :likes_snack, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you like Hot Food?" %>
+    <%= f.radio_button :likes_hot_food, true %><%= f.label :likes_hot_food, "Yes" %>
+    <%= f.radio_button :likes_hot_food, false %><%= f.label :likes_hot_food, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you like Cold Food?" %>
+    <%= f.radio_button :likes_cold_food, true %><%= f.label :likes_cold_food, "Yes" %>
+    <%= f.radio_button :likes_cold_food, false %><%= f.label :likes_cold_food, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you like Soup?" %>
+    <%= f.radio_button :likes_soup, true %><%= f.label :likes_soup, "Yes" %>
+    <%= f.radio_button :likes_soup, false %><%= f.label :likes_soup, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you like Dessert?" %>
+    <%= f.radio_button :likes_dessert, true %><%= f.label :likes_dessert, "Yes" %>
+    <%= f.radio_button :likes_dessert, false %><%= f.label :likes_dessert, "No" %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you have any allergies?" %>
+    <%= f.radio_button :has_allergies, true %><%= f.label :has_allergies, "Yes" %>
+    <%= f.radio_button :has_allergies, false %><%= f.label :has_allergies, "No" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+
+
+
