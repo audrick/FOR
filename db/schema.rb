@@ -11,7 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121208205409) do
+ActiveRecord::Schema.define(:version => 20121212200823) do
+
+  create_table "meals", :force => true do |t|
+    t.string  "meal_name"
+    t.decimal "meal_price"
+    t.text    "meal_description"
+    t.string  "meal_photo"
+    t.boolean "type_american"
+    t.boolean "type_asian"
+    t.boolean "type_barbecue"
+    t.boolean "type_vegetarian"
+    t.boolean "type_snack"
+    t.boolean "type_hot_food"
+    t.boolean "type_soup"
+    t.boolean "type_dessert"
+    t.boolean "has_allergies"
+    t.integer "user_id"
+  end
 
   create_table "models", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -54,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20121208205409) do
     t.boolean  "likes_soup"
     t.boolean  "likes_dessert"
     t.boolean  "has_allergies"
+    t.boolean  "is_seller"
     t.integer  "seller_distance_preference"
     t.boolean  "seller_delivery_preference"
     t.boolean  "seller_pickup_preference"

@@ -25,6 +25,7 @@
     <%= f.label "Can I pickup my meal?" %>
     <%= f.radio_button :seller_pickup_preference, true %><%= f.label :seller_pickup_preference, "Yes" %>
     <%= f.radio_button :seller_pickup_preference, false %><%= f.label :seller_pickup_preference, "No" %>
+    <%= f.hidden_field :is_seller, :value => true %>
   </div>
 
   <div class="actions">

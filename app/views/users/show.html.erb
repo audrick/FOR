@@ -5,9 +5,20 @@
 
 <%= link_to "Edit", edit_user_path %>
 <%= link_to "My Prefs", my_prefs_path %>
-<%= link_to "Create New User", new_user_path %><br/>
+<%= link_to "Create New User", new_user_path %>
+<%= link_to "Back to Index", users_path %><br/>
 
 
-<%= link_to "Continue", edit_user_path %>
+<% if @user.is_seller %>
+    <%= link_to "Post a Meal", new_meal_path %>
+<% end %>
+
+<h1><% @user.meals.each do |meal| %></h1>
+<%= meal.meal_name %>
+<% end %>
+
+
+
+
 
 

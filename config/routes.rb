@@ -1,17 +1,23 @@
 FOR::Application.routes.draw do
 
+  # get "meals/index"
+
+  # get "meals/new"
+
+  # get "meals/edit"
+
+  # get "meals/show"
+
   # devise_for :users
 
   resources :users
+  resources :meals
 
   root :to => 'users#new'
 
   match '/login' => 'session#new', :via => :get
   match '/logout' => 'session#destroy', :via => :get
   match '/session' => 'session#create', :via => :post
-
-
-
 
 
 

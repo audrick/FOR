@@ -23,6 +23,7 @@ class CreateUsers < ActiveRecord::Migration
       t.boolean :likes_soup
       t.boolean :likes_dessert
       t.boolean :has_allergies
+      t.boolean :is_seller
       t.integer :seller_distance_preference
       t.boolean :seller_delivery_preference
       t.boolean :seller_pickup_preference

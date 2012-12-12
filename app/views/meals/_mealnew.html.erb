@@ -1,0 +1,40 @@
+<%= form_for (@meal) do |f| %>
+  <% if @meal.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@meal.errors.count, "error") %> prohibited this meal from being saved: </h2>
+      <ul>
+        <% @meals.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "What is the meal name?" %>
+    <%= f.text_field :meal_name %>
+  </div>
+  <div class="field">
+    <%= f.label "Name your price" %>
+    <%= f.text_field :meal_price %>
+  </div>
+  <div class="field">
+    <%= f.label "Description" %>
+    <%= f.text_field :meal_description %>
+  </div>
+  <div class="field">
+    <%= f.label "Check all types that apply:" %>
+    <%= f.check_box :type_american, :checked => false %><%= f.label "American" %>
+    <%= f.check_box :type_asian, :checked => false %><%= f.label "Asian" %>
+    <%= f.check_box :type_barbecue, :checked => false %><%= f.label "Barbecue" %>
+    <%= f.check_box :type_vegetarian, :checked => false %><%= f.label "Vegetarian" %>
+    <%= f.check_box :type_snack, :checked => false %><%= f.label "Snack" %>
+    <%= f.check_box :type_hot_food, :checked => false %><%= f.label "Hot Food" %>
+    <%= f.check_box :type_soup, :checked => false %><%= f.label "Soup" %>
+    <%= f.check_box :type_dessert, :checked => false %><%= f.label "Dessert" %>
+    <%= f.check_box :has_allergies, :checked => false %><%= f.label "Contains allergies" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
