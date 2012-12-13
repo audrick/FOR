@@ -9,6 +9,7 @@
 #  meal_photo       :string(255)
 #  type_american    :boolean
 #  type_asian       :boolean
+#  type_mexican     :boolean
 #  type_barbecue    :boolean
 #  type_vegetarian  :boolean
 #  type_snack       :boolean

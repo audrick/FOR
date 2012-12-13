@@ -1,24 +1,40 @@
-<h1><%= @user.username %></h1>
+<%= link_to "logout", '/logout' %>
+
+<% if @auth %>
+  <div><h2>Welcome <%= @auth[:first_name] %></h2></div>
+  <br>
+
+<h1>Your username is: <%= @user.username %></h1>
 
 <p>Find me in app/views/users/show.html.erb</p>
 
 
 <%= link_to "Edit", edit_user_path %>
-<%= link_to "My Prefs", my_prefs_path %>
+<%#= link_to "My Prefs", my_prefs_path %>
 <%= link_to "Create New User", new_user_path %>
 <%= link_to "Back to Index", users_path %><br/>
-
 
 <% if @user.is_seller %>
     <%= link_to "Post a Meal", new_meal_path %>
 <% end %>
 
-<h1><% @user.meals.each do |meal| %></h1>
-<%= meal.meal_name %>
+
+<% meal_show_tag(@user) %>
+
+
+<% if @user.is_seller && @user.meals %>
+  <h3>1Your Posted Meals:</h3>
+  <% @user.meals.each do |meal| %>
+  <%= meal.meal_name %><br/>
+  <% end %>
 <% end %>
 
 
+<h3>2Your Posted Meals:<% @user.meals.each do |meal| %></h3>
+<%= meal.meal_name %><br/>
+<% end %>
 
+<% end %>
 
 
 

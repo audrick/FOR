@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20121212200823) do
     t.string  "meal_photo"
     t.boolean "type_american"
     t.boolean "type_asian"
+    t.boolean "type_mexican"
     t.boolean "type_barbecue"
     t.boolean "type_vegetarian"
     t.boolean "type_snack"

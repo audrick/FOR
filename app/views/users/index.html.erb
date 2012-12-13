@@ -1,16 +1,17 @@
-<h1>The current user is: <%= @auth.try(:username) %></h1>
 
-<%= @users.each do |user| %>
+<p>Find me in app/views/users/index.html.erb</p>
+
+<h1>The current list of users are:</h1>
+
+<h1><% @users.each do |user| %></h1>
 
 <p><%= user.username %></p>
 <td><%= link_to 'Show', user %></td>
 <td><%= link_to 'Edit', edit_user_path(user) %></td>
 <td><%= link_to 'Destroy', user, method: :delete, data: {confirm: 'Are you sure?'}%></td>
-
 <% end %>
+
 <br/>
 <br/>
 <%= link_to 'New User', new_user_path %>
 
-
-<p>Find me in app/views/users/index.html.erb</p>
