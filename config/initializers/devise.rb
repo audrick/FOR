@@ -82,7 +82,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "73f448e5f70d45f154431d62979a8b0dbc3a4283dca4a4069849173d59c8dacb41be97b6c2bd17def97c55e9f86580bdb506c81b5668b7320a59927da6608faf"
+  # config.pepper = "06cf6fb9a6bdf0b87122d0a3cfd2cc5d254bbbd7eba8a651bc37ce30b27da77b995c4225134f5dbd3d90d34ecc303911b92e9296e902cc2a768970811ad5d685"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -125,7 +125,7 @@ Devise.setup do |config|
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
   # config.timeout_in = 30.minutes
-  
+
   # If true, expires auth token on session timeout.
   # config.expire_auth_token_on_timeout = false
 

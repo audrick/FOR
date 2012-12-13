@@ -1,8 +1,9 @@
 <%= link_to "logout", '/logout' %>
 
 <% if @auth %>
-  <div><h2>Welcome <%= @auth[:first_name] %></h2></div>
+  <div><h2>Welcome <%= @auth.first_name %></h2></div>
   <br>
+<% end %>
 
 <h1>Your username is: <%= @user.username %></h1>
 
@@ -19,7 +20,7 @@
 <% end %>
 
 
-<% meal_show_tag(@user) %>
+<%= meal_show_tag(@user) %>
 
 
 <% if @user.is_seller && @user.meals %>
@@ -30,11 +31,11 @@
 <% end %>
 
 
-<h3>2Your Posted Meals:<% @user.meals.each do |meal| %></h3>
-<%= meal.meal_name %><br/>
-<% end %>
+<!-- <h3>2Your Posted Meals:<%# @user.meals.each do |meal| %></h3> -->
+<!-- <%#= meal.meal_name %><br/> -->
+<%# end %>
 
-<% end %>
+
 
 
 

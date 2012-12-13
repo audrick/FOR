@@ -25,9 +25,12 @@ gem 'twitter-bootstrap-rails'
 
 
 group :development, :test do
+  gem "better_errors"
+  gem "binding_of_caller"
   gem 'pry-debugger'
   gem 'pry-rails'
   gem 'pry-stack_explorer'
+  gem 'quiet_assets'
   gem 'thin'
 end
 

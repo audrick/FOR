@@ -6,13 +6,15 @@ module ApplicationHelper
     tag :input, html_options
   end
 
+
   def meal_show_tag(user)
     if user.is_seller && user.meals
       a = "<h3>3Your Posted Meals:</h3>"
+      b = []
       user.meals.each do |meal|
-      b = meal.meal_name
-      a += b
+        b << meal.meal_name
       end
+      puts "hello"
     end
   end
 end
